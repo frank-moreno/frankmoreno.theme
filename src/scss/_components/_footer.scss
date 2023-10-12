@@ -1,0 +1,144 @@
+footer,
+narrow-footer {
+
+    padding-top: 0px;
+    margin: 0;
+
+    h1 {
+        font-family: $heading-brand-font;
+    }
+
+    .contact_img {
+
+        background-image: url('../../assets/images/img/Handshake.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+        margin-bottom: 100px;
+
+        &::before {
+
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(62,63,65,0.4);
+
+        }
+
+        .row {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+
+            .col {
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                color: $white;
+
+                h2 {
+
+                    
+                    font-weight: 700;
+                    margin: 0;
+                    padding: 0;
+
+                }
+
+            }
+
+        }
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+
+    }
+
+    .menu_bar {
+
+        .row {
+
+            border-bottom: 1px solid $grey;
+            padding-bottom: 10px;
+
+            .col {
+
+                &:nth-child(3) {
+
+                    figure {
+
+                        float:right;
+
+                        img {
+
+                            width: 30px !important;
+                            height: 30px !important;
+
+                        }
+                    
+                    }
+
+                }
+
+            }
+
+        }
+
+        @include media-breakpoint-between(md, xl)  {
+
+            .wp-social-link-facebook,
+            .wp-social-link-linkedin{
+                display: none !important;
+            }
+
+        }
+
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+
+            h1 {
+                font-size: 40px !important;
+                padding-bottom: 40px;
+            }
+
+            ul {
+                column-gap: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+           ul.wp-block-social-links {
+                flex-direction:row;
+                justify-content: center;
+                padding-top: 50px;
+            }
+
+            .col {
+                &:nth-child(3) {
+                    figure {
+                        float: none !important;
+                        margin: 30px auto;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .copyright p {
+
+        font-size: 13px !important;
+
+    }
+
+}

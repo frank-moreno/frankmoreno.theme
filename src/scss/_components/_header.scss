@@ -1,0 +1,62 @@
+header {
+
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    padding-top: 15px;
+
+    @include media-breakpoint-down(lg) {
+        padding-top: 25px;
+    }
+
+    &.scrolled {
+        background-color: $bluegrey;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+
+        h1 a {
+            color: $white;
+            border-radius: 100%;
+            border-right: 10px $white solid;
+        }
+
+        li a {
+            color: $white !important;
+        }
+
+        li:last-child a {
+            color: $bluegrey !important;
+
+            &:hover {
+                color: $white !important;
+            }
+        }
+    }
+
+    .wp-block-site-title {
+        margin: 0;
+        padding: 0;
+        font-size: $h4;
+        color: $white;
+        letter-spacing: 1px;
+        line-height: 1;
+        font-family: $heading-brand-font;
+
+        a {
+            color: $bluegrey;
+            text-decoration: none;
+            border-radius: 100%;
+            border-right: 10px $bluegrey solid;
+            padding: 5px 10px 5px 0;
+
+            &.homepage-logo {
+                color: $white;
+                border-right: 10px $white solid;
+                padding: 5px 10px 5px 0;
+            }
+        }
+    }
+
+}

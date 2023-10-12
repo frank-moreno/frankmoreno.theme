@@ -1,0 +1,35 @@
+{
+	"name": "wps-theme",
+	"version": "0.1.0",
+	"description": "Main theme for the WPS project",
+	"author": "Francisco Carracedo",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"WordPress",
+		"Theme",
+		"Blocks"
+	],
+	"devDependencies": {
+		"@parcel/transformer-sass": "2.7.0",
+		"parcel": "^2.7.0"
+	},
+	"dependencies": {
+		"bootstrap": "^5.2.0"
+	},
+	"source": [
+		"src/js/theme-main.js",
+		"src/scss/theme-main.scss"
+	],
+	"targets": {
+		"default": {
+			"distDir": "./dist"
+		}
+	},
+	"scripts": {
+		"build": "parcel build",
+		"watch": "parcel watch"
+	},
+	"engines": {
+		"node": ">= 12"
+	}	
+}
