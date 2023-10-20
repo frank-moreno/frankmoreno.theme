@@ -81,14 +81,15 @@ html.has-modal-open {
 
         ul {
 
-            justify-content: space-between;
+            justify-content: flex-start;
+            margin-top: 10px;
 
             li {
     
                 color: $bluegrey;
 
                 &:hover {
-                    color: $grey !important;
+                    color: $red !important;
                     transition: all 0.2s ease;
                 }
     
@@ -99,7 +100,7 @@ html.has-modal-open {
                     display: block;
                     height: 100%;
                     position: absolute;
-                    right: -30px;
+                    right: -13px;
     
                 }
     
@@ -113,15 +114,15 @@ html.has-modal-open {
                         display: none;
                     }
 
-                    background-color: $grey;
-                    padding: 10px 20px;
-                    color: $bluegrey !important;
+                    // background-color: $grey;
+                    // padding: 10px 20px;
+                    // color: $bluegrey !important;
 
-                    &:hover {
-                        background-color: $darkred;
-                        color: $white !important;
-                        transition: all 0.2s ease;
-                    }
+                    // &:hover {
+                    //     background-color: $darkred;
+                    //     color: $white !important;
+                    //     transition: all 0.2s ease;
+                    // }
                 }
     
             }
@@ -207,7 +208,7 @@ main ~ .wp-block-template-part {
         display: block;
         height: 100%;
         position: absolute;
-        right: -30px;
+        right: -13px;
 
     }
   

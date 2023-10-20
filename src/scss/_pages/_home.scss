@@ -4,7 +4,7 @@
 
         min-height: 100vh;
 
-        background-image: url('../../assets/images/img/programmer.jpg');
+        background-image: url('../../assets/images/img/programmer-wps.jpg');
         background-size: cover;
         background-position: 85%;
         background-repeat: no-repeat;
@@ -18,7 +18,35 @@
             width: 100%;
             height: 100%;
             background: rgb(0,0,0);
-            background: linear-gradient(145deg, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 85%, rgba(255, 255, 255, 0.3) 85%, rgba(255, 255, 255,0.3) 100%);
+            background: linear-gradient(145deg, rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.4) 85%, rgba(255, 255, 255, 0.3) 85%, rgba(255, 255, 255,0.3) 100%);
+        }
+
+        H1 {
+            font-size: 84px;
+            font-weight: lighter;
+            text-align: right;
+            strong{
+                color: $darkred;
+                font-size: 64px;
+                font-family: $handwriting-font;
+                position: absolute;
+                top: 30px;
+                left: -5px;
+                transform: rotate(5deg);
+            }
+            span{
+                font-family: $handwriting-font;
+                color:$darkred;
+                font-size: 72px;
+                margin-right: -50px;
+                position: relative;
+                z-index: 2;
+            }
+        }
+
+        h1 ~ div {
+            display: flex;
+            justify-content: flex-start;
         }
 
         h1,

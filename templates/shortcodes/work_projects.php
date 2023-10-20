@@ -63,7 +63,7 @@ function work_projects_shortcode() {
     // Restore original Post Data
     wp_reset_postdata();
 
-    return $output;
+    // return $output;
 
 }
 

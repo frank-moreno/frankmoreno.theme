@@ -1,11 +1,18 @@
 
-@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;600&family=Red+Hat+Display:ital,wght@0,300;0,600;1,300&display=swap');// Font - Families
+// @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;600&family=Red+Hat+Display:ital,wght@0,300;0,600;1,300&display=swap');// Font - Families
 
-@import url('https://fonts.cdnfonts.com/css/lt-galaxy-reverse');
+// @import url('https://fonts.cdnfonts.com/css/lt-galaxy-reverse');
 
-$heading-brand-font: 'MuseoModerno', sans-serif;
-$heading-font: 'LT Galaxy Reverse', sans-serif;
-$body-font: 'Red Hat Display', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,500;6..12,600;6..12,700&family=Sassy+Frass&display=swap');
+@import url("https://use.typekit.net/dij2ray.css");
+
+// $heading-brand-font: 'MuseoModerno', sans-serif;
+$handwriting-font: 'Comforter Brush', cursive;
+$handwriting-2-font: 'Sassy Frass', cursive;
+$heading-font: 'Nunito Sans', sans-serif;
+$body-font: 'Nunito Sans', sans-serif;
+
+
 
 // Brand colours
 $white: #FFFFFF;

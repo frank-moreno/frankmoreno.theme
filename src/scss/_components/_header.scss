@@ -18,45 +18,45 @@ header {
 
         h1 a {
             color: $white;
-            border-radius: 100%;
-            border-right: 10px $white solid;
+            // border-radius: 100%;
+            // border-right: 10px $white solid;
         }
 
         li a {
             color: $white !important;
         }
 
-        li:last-child a {
-            color: $bluegrey !important;
+        // li:last-child a {
+        //     color: $bluegrey !important;
 
-            &:hover {
-                color: $white !important;
-            }
-        }
+        //     &:hover {
+        //         color: $white !important;
+        //     }
+        // }
     }
 
     .wp-block-site-title {
-        margin: 0;
+        margin: -10px 0 0;
         padding: 0;
-        font-size: $h4;
+        font-size: $h1;
         color: $white;
         letter-spacing: 1px;
         line-height: 1;
-        font-family: $heading-brand-font;
+        font-family: $handwriting-2-font;
 
-        a {
-            color: $bluegrey;
-            text-decoration: none;
-            border-radius: 100%;
-            border-right: 10px $bluegrey solid;
-            padding: 5px 10px 5px 0;
+        // a {
+        //     color: $bluegrey;
+        //     text-decoration: none;
+        //     border-radius: 100%;
+        //     border-right: 10px $bluegrey solid;
+        //     padding: 5px 10px 5px 0;
 
-            &.homepage-logo {
-                color: $white;
-                border-right: 10px $white solid;
-                padding: 5px 10px 5px 0;
-            }
-        }
+        //     &.homepage-logo {
+        //         color: $white;
+        //         border-right: 10px $white solid;
+        //         padding: 5px 10px 5px 0;
+        //     }
+        // }
     }
 
 }
