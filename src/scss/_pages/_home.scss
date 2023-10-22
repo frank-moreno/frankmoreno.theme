@@ -33,6 +33,25 @@
                 top: 30px;
                 left: -5px;
                 transform: rotate(5deg);
+                @include media-breakpoint-down(sm){
+                    font-size: 32px;
+                    top: 40px;
+                    left: 13%;
+                }
+                @include media-breakpoint-down(xsm){
+                    left: 0;
+                    position: relative;
+                    float: left;
+                    top: 0;
+                }
+
+                @media screen and (max-width: 320px) {
+                    float: left;
+                    position: relative;
+                    top: 40px;
+                    left: 0;
+                    font-size: 24px;
+                }
             }
             span{
                 font-family: $handwriting-font;
@@ -122,6 +141,10 @@
 
             h1 {
                 font-size: 40px;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 32px;
+                }
             }
 
             > .row {
@@ -150,6 +173,10 @@
                                 text-shadow: 2px 2px 0px rgba(0,0,0,0.8);
                                 // color: $bluegrey;
                                 font-weight: 400;
+
+                                @media screen and (max-width: 320px){
+                                    font-size: 20px;
+                                }
                             }
         
                             p {

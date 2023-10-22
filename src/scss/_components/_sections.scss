@@ -14,23 +14,34 @@
 
             color: $white;
 
-            //bars
-            .container .row > .col:first-child {
-                border-right: #f7f7f7 1px solid;
-            }
+            
 
-            h2 {
-                font-size: 64px;
+            @include media-breakpoint-up(lg){
+                //bars
+                .container .row > .col:first-child {
+                    border-right: #f7f7f7 1px solid;
+                }
+
+                h2 {
+                    font-size: 64px;
+                }
             }
 
             p {
                 font-size: 21px;
+
+                @include media-breakpoint-down(md) {
+                    text-align: left !important;
+                }
             }
 
             &.dev {
                 h2 {
                     padding-right: 25%;
                     padding-left: 5%;
+                    @include media-breakpoint-down(md) {
+                        padding-left: 0;
+                    }
                 }
     
                 p {
@@ -42,10 +53,19 @@
                 h2 {
                     padding-right: 5%;
                     padding-left: 25%;
+                    @include media-breakpoint-down(md) {
+                        padding-left: 0;
+                        padding-right: 20%;
+                        text-align: left;
+                        margin-bottom: -15px;
+                    }
                 }
     
                 p {
                     padding-left: 5%;
+                    @include media-breakpoint-down(md) {
+                        padding-left: 0;
+                    }
                 }
             }
 
@@ -55,23 +75,31 @@
 
             margin: 100px 0;
 
-            &.left {
-                background-image: url('../../assets/images/img/webuild.png');
-                background-position: left;
-                background-repeat: no-repeat;
-                background-size: 50% 100%;
-            }
+            @include media-breakpoint-up(md){
 
-            &.right {
-                background-image: url('../../assets/images/img/pwaimg.png');
-                background-position: right;
-                background-repeat: no-repeat;
-                background-size: 50% 100%;
-            }
+                &.left {
+                    background-image: url('../../assets/images/img/webuild.png');
+                    background-position: left;
+                    background-repeat: no-repeat;
+                    background-size: 50% 100%;
+                }
+    
+                &.right {
+                    background-image: url('../../assets/images/img/pwaimg.png');
+                    background-position: right;
+                    background-repeat: no-repeat;
+                    background-size: 50% 100%;
+                }
+
+            } 
 
             .dev {
                 ol {
                     padding: 0 0 0 50px;
+
+                    @include media-breakpoint-down(md) {
+                        padding: 0 0 0 20px;
+                    }
 
                     li {
                         font-size: 21px;
@@ -294,6 +322,12 @@
                 color: $gold;
                 font-size: 64px;
                 margin-bottom: 0;
+                @include media-breakpoint-down(md) {
+                   line-height: 45px;
+                }
+                @media screen and (max-width: 320px){
+                    font-size: 42px;
+                }
             }
 
         }
