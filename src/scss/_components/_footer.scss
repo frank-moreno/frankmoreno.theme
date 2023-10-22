@@ -4,17 +4,21 @@ narrow-footer {
     padding-top: 0px;
     margin: 0;
 
+
+    & > div {
+        padding: 0 !important;
+    }
+
     h1 {
         font-family: $handwriting-font;
     }
-
+    
     .contact_img {
 
         background-image: url('../../assets/images/img/Handshake.jpg');
         background-size: cover;
         background-position: center;
         height: 350px;
-        margin-bottom: 100px;
 
         &::before {
 
@@ -63,6 +67,8 @@ narrow-footer {
     }
 
     .menu_bar {
+
+        margin-top: 100px;
 
         .row {
 

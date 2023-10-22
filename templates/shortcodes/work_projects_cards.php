@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-function work_projects_shortcode() {
+function work_projects_cards_shortcode() {
 
     // reset the query
     wp_reset_query();
@@ -25,14 +25,13 @@ function work_projects_shortcode() {
     // The Loop
     if ( $query->have_posts() ) {
 
-        $output = '<div class="swiper-container swiper-projects">
-                        <div class="swiper-wrapper">';
+        $output = '<div class="card-group">';
 
         while ( $query->have_posts() ) {
             $query->the_post();
 
-            $output .= '<div class="swiper-slide">
-                            <div class="project-item u-faux-box-link">
+            $output .= '<div class="card">
+                            <div class="card-body u-faux-box-link">
                                 <div class="project-item__image">
                                     <img src="' . get_the_post_thumbnail_url() . '" alt="' . get_the_title() . '">
                                 </div>
@@ -53,8 +52,7 @@ function work_projects_shortcode() {
 
         }
 
-        $output .= '</div>
-                </div>';
+        $output .= '</div>';
 
     } else {
         // no posts found
@@ -67,6 +65,6 @@ function work_projects_shortcode() {
 
 }
 
-add_shortcode( 'work_projects', 'work_projects_shortcode' );
+add_shortcode( 'work_projects_cards', 'work_projects_cards_shortcode' );
 
 ?>

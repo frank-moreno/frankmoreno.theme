@@ -95,9 +95,13 @@ const swiper = new Swiper('.swiper-projects', {
         enabled: true,
         onlyInViewport: false,
     },
-    pagination: {
-        el: ".swiper-pagination",
-        dynamicBullets: true,
-      },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    // pagination: {
+    //     el: ".swiper-pagination",
+    //     dynamicBullets: true,
+    //   },
     grabCursor: true
   });

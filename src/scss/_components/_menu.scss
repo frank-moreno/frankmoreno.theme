@@ -81,12 +81,14 @@ html.has-modal-open {
 
         ul {
 
-            justify-content: flex-start;
-            margin-top: 10px;
+            justify-content: flex-end;
+            margin-top: -5px;
 
             li {
     
                 color: $bluegrey;
+                padding: 0 10px;
+                font-weight: 400;
 
                 &:hover {
                     color: $red !important;
@@ -114,15 +116,15 @@ html.has-modal-open {
                         display: none;
                     }
 
-                    // background-color: $grey;
-                    // padding: 10px 20px;
-                    // color: $bluegrey !important;
+                    background-color: $grey;
+                    padding: 10px 20px;
+                    color: $bluegrey !important;
 
-                    // &:hover {
-                    //     background-color: $darkred;
-                    //     color: $white !important;
-                    //     transition: all 0.2s ease;
-                    // }
+                    &:hover {
+                        background-color: $darkred;
+                        color: $white !important;
+                        transition: all 0.2s ease;
+                    }
                 }
     
             }

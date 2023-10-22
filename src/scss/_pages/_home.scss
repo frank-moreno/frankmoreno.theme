@@ -173,7 +173,7 @@
 
         &__intro {
 
-            margin-bottom: 50px;
+            margin-bottom: 0px;
             margin-top: 0;
 
             > .row {
@@ -183,12 +183,15 @@
             background: linear-gradient(25deg, rgba(62,63,65,1) 0%,rgba(62,63,65,1) 60%, rgba(44,41,24, 1) 60%, rgba(44,41,24,1) 100%);
 
             h3 {
-                color: $darkred;
+                color: $gold;
+                font-family: $handwriting-2-font;
+                font-size: 48px;
             }
 
             h2 {
                 color: $white;
                 font-size: 56px;
+                margin-bottom: 0;
             }
 
             .icons-cross {
@@ -285,82 +288,6 @@
                 }
             }
             
-        }
-
-    }
-
-    .companies {
-
-        &__header {
-
-            padding-top: 100px;
-
-            h2 {
-                color: $darkred;
-                font-weight: 700;
-            }
-
-        }
-
-        &__grid {
-
-            padding-bottom: 60px;
-
-            & > div {
-
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                grid-gap: 20px;
-                padding: 50px 0;
-
-                @include media-breakpoint-down(xl) {
-                    grid-template-columns: repeat(3, 1fr);
-                }
-
-                @include media-breakpoint-down(lg) {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-
-                @include media-breakpoint-down(md) {
-                    grid-template-columns: repeat(1, 1fr);
-                }
-    
-                & > div > div {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    height: 100%;
-                    padding: 20px 10px 10px;
-                    opacity: .5;
-    
-                    // padding: 20px 0;
-                    background-color: white;
-
-                    &:hover {
-                        opacity: 1;
-                        transition: all 0.3s ease-in-out;
-                    }
-
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: #e3e3e3;
-                    }
-    
-                    img {
-                        max-width: 50px;
-                        max-height: 50px;
-                        object-fit: contain;
-                        margin-right: 20px;
-                    }
-                }
-    
-            }
-
         }
 
     }

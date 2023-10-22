@@ -1,6 +1,10 @@
 main {
 
     margin-block-start: 0 !important;
+    
+    &.wp-block-group {
+        padding: 0;
+    }
 
 }
 
@@ -41,5 +45,5 @@ img {
     white-space: nowrap;
 
     background: transparent;
-    z-index: -1;
+    z-index: 2;
 }
