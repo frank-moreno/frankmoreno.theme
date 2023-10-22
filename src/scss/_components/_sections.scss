@@ -597,6 +597,20 @@
                 z-index: 1;
             }
 
+            a {
+
+                color: $bluegrey;
+                font-weight: 700;
+                font-size: 24px;
+                z-index: 1;
+
+                &:hover {
+                    color: $darkred;
+                    transition: all 0.3s ease-in-out;
+                }
+
+            }
+
         }
 
         &--form {

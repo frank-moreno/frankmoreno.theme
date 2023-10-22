@@ -22,9 +22,13 @@ header {
             // border-right: 10px $white solid;
         }
 
-        // li a {
-        //     color: $white !important;
-        // }
+        .wp-block-navigation__responsive-container{
+
+            li {
+                color: $white;
+            }
+
+        }
 
         // li:last-child a {
         //     color: $bluegrey !important;
