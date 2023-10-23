@@ -74,11 +74,11 @@
             color: $white;
 
             @include media-breakpoint-down(xl){
-                max-width: 60%;
+                max-width: 70%;
             }
 
             @include media-breakpoint-down(lg){
-                max-width: 80%;
+                max-width: 100%;
             }
 
             @include media-breakpoint-down(md){

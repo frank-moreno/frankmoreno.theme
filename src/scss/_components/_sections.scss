@@ -16,7 +16,7 @@
 
             
 
-            @include media-breakpoint-up(lg){
+            @include media-breakpoint-up(xl){
                 //bars
                 .container .row > .col:first-child {
                     border-right: #f7f7f7 1px solid;
@@ -30,7 +30,7 @@
             p {
                 font-size: 21px;
 
-                @include media-breakpoint-down(md) {
+                @include media-breakpoint-down(xl) {
                     text-align: left !important;
                 }
             }
@@ -39,7 +39,7 @@
                 h2 {
                     padding-right: 25%;
                     padding-left: 5%;
-                    @include media-breakpoint-down(md) {
+                    @include media-breakpoint-down(xl) {
                         padding-left: 0;
                     }
                 }
@@ -53,7 +53,7 @@
                 h2 {
                     padding-right: 5%;
                     padding-left: 25%;
-                    @include media-breakpoint-down(md) {
+                    @include media-breakpoint-down(xl) {
                         padding-left: 0;
                         padding-right: 20%;
                         text-align: left;
@@ -63,7 +63,7 @@
     
                 p {
                     padding-left: 5%;
-                    @include media-breakpoint-down(md) {
+                    @include media-breakpoint-down(xl) {
                         padding-left: 0;
                     }
                 }
@@ -75,7 +75,7 @@
 
             margin: 100px 0;
 
-            @include media-breakpoint-up(md){
+            @include media-breakpoint-up(xl){
 
                 &.left {
                     background-image: url('../../assets/images/img/webuild.png');
@@ -343,7 +343,7 @@
                 gap: 25px;
                 height: 100%;
 
-                @include media-breakpoint-down(md) {
+                @include media-breakpoint-down(lg) {
                     grid-template-columns: repeat(2, 1fr);
                 }
 
