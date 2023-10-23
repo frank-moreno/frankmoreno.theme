@@ -21,7 +21,7 @@
             background: linear-gradient(145deg, rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.4) 85%, rgba(255, 255, 255, 0.3) 85%, rgba(255, 255, 255,0.3) 100%);
         }
 
-        H1 {
+        h1 {
             font-size: 84px;
             font-weight: lighter;
             text-align: right;
@@ -135,6 +135,20 @@
 
             }
 
+        }
+
+        @include media-breakpoint-between(md,xl) {
+            & .container > .row > div {
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                h1 {
+                    position: absolute;
+                    top: 25%;
+                }
+            }
         }
 
         @include media-breakpoint-down(sm) {
