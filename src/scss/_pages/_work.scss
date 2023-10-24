@@ -3,7 +3,10 @@
     .intro {
 
         padding-top: 150px;
-        height: 35vh;
+
+        @include media-breakpoint-up(md) {
+            height: 35vh;
+        }
 
         h1 {
             font-size: 56px;
