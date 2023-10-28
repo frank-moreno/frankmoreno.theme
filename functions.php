@@ -34,8 +34,8 @@ include( get_template_directory() . '/templates/shortcodes/post_projects.php' );
 
 
 /* Describe what the code snippet does so you can remember later on */
-add_action('wp_head', 'your_function_name');
-function your_function_name(){
+add_action('wp_head', 'coockie_policy_banner');
+function coockie_policy_banner(){
 ?>
     <script src="https://cdn.websitepolicies.io/lib/cconsent/cconsent.min.js" defer></script><script>window.addEventListener("load",function(){window.wpcb.init({"border":"thin","corners":"small","colors":{"popup":{"background":"#ffe4e1","text":"#000000","border":"#c25e5e"},"button":{"background":"#c25e5e","text":"#ffffff"}},"position":"bottom","content":{"href":"https://frank-moreno.com/cookie-policy/"}})});</script>
 <?php
