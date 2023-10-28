@@ -105,6 +105,23 @@ form.wpcf7-form {
         height: 150px;
     }
 
+    .acceptance {
+        
+        p {
+            color: $white;
+            font-size: 80%;
+
+            & > span {
+                width: auto;
+                position: relative;
+                display: block;
+                float: left;
+                margin: -25px 10px 0 -10px;
+            }
+        }
+ 
+    }
+
     .wpcf7-checkbox {
         display: flex;
         flex-direction: row;
