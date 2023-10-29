@@ -25,18 +25,40 @@
             font-size: 84px;
             font-weight: lighter;
             text-align: right;
+            &:lang(es){
+                font-size: 75px;
+                @include media-breakpoint-down(sm){
+                    font-size: 40px;
+                }
+                @include media-breakpoint-down(xsm){
+                    font-size: 1.52rem;
+                }
+            }
             strong{
                 color: $darkred;
                 font-size: 64px;
                 font-family: $handwriting-font;
                 position: absolute;
-                top: 30px;
+                top: 25px;
                 left: -5px;
                 transform: rotate(5deg);
+                &:lang(es){
+                    left: 150px;
+                    @include media-breakpoint-down(xl){
+                        left: 130px;
+                    }
+                    @include media-breakpoint-down(xsm){
+                        top: 0;
+                    }
+                }
                 @include media-breakpoint-down(sm){
                     font-size: 32px;
                     top: 40px;
                     left: 13%;
+                    &:lang(es){
+                        left: 75px;
+                        font-size: 45px;
+                    }
                 }
                 @include media-breakpoint-down(xsm){
                     left: 0;
@@ -75,7 +97,12 @@
 
             @include media-breakpoint-down(xl){
                 max-width: 70%;
+
+                &:lang(es){
+                    max-width: 100%;
+                }
             }
+
 
             @include media-breakpoint-down(lg){
                 max-width: 100%;

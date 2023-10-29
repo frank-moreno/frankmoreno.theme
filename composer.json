@@ -1,0 +1,23 @@
+{
+    "name": "frank-moreno/acf-builder",
+    "description": "The starting point base theme for frank-moreno Wordpress projects",
+    "type": "wordpress-theme",
+    "authors": [{
+        "name": "Frank Moreno",
+        "email": "hello@frank-moreno.com"
+    }],
+    "require": {
+        "stoutlogic/acf-builder": "^1.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "Theme\\": "inc"
+        },
+        "files": ["inc/acf.php"]
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}
