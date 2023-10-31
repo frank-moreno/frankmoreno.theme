@@ -88,3 +88,7 @@ header-es {
 body:not(.home) header .wp-block-site-title{
     color: $bluegrey;
 }
+
+body:lang(es):not(.home) header-es .wp-block-site-title{
+    color: $bluegrey;
+}

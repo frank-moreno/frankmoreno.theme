@@ -20,7 +20,4 @@ $(document).ready(function () {
         $('.wp-block-site-title a').addClass('homepage-logo');
     }
 
-    
-
-
 });
