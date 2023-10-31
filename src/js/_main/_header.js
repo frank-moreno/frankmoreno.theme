@@ -6,9 +6,9 @@ $(document).ready(function () {
     // add class on scroll down to add styles to header
     $(window).scroll(function () {
         if ($(this).scrollTop() > 0) {
-            $('header').addClass('scrolled');
+            $('header, header-es').addClass('scrolled');
         } else {
-            $('header').removeClass('scrolled');
+            $('header, header-es').removeClass('scrolled');
         }
     }
     );
