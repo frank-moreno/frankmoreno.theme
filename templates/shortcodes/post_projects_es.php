@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-function post_projects_shortcode() {
+function post_projects_es_shortcode() {
 
     // reset the query
     wp_reset_query();
@@ -34,7 +34,7 @@ function post_projects_shortcode() {
         while ( $query->have_posts() ) {
             $query->the_post();
 
-            if (get_the_terms( get_the_ID(), 'language' )[0]-> slug == 'en') {
+            if (get_the_terms( get_the_ID(), 'language' )[0]-> slug == 'es') {
 
                 if ( $current_post_id == get_the_ID() ) {
                     // get the current post fields and store them in variables
@@ -145,6 +145,6 @@ function post_projects_shortcode() {
 
 }
 
-add_shortcode( 'post_projects', 'post_projects_shortcode' );
+add_shortcode( 'post_projects_es', 'post_projects_es_shortcode' );
 
 ?>

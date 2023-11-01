@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-function work_projects_shortcode() {
+function work_projects_es_shortcode() {
 
     // reset the query
     wp_reset_query();
@@ -31,7 +31,7 @@ function work_projects_shortcode() {
         while ( $query->have_posts() ) {
             $query->the_post();
 
-            if (get_the_terms( get_the_ID(), 'language' )[0]-> slug == 'en') {
+            if (get_the_terms( get_the_ID(), 'language' )[0]-> slug == 'es') {
 
                 $output .= '<div class="swiper-slide">
                             <div class="project-item u-faux-box-link">
@@ -71,6 +71,6 @@ function work_projects_shortcode() {
 
 }
 
-add_shortcode( 'work_projects', 'work_projects_shortcode' );
+add_shortcode( 'work_projects_es', 'work_projects_es_shortcode' );
 
 ?>

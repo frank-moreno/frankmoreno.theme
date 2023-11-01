@@ -28,7 +28,11 @@ add_action( 'wp_enqueue_scripts', 'theme_assets' );
 
 include( get_template_directory() . '/templates/shortcodes/work_projects.php' );
 
+include( get_template_directory() . '/templates/shortcodes/work_projects_es.php' );
+
 include( get_template_directory() . '/templates/shortcodes/work_projects_cards.php' );
+
+include( get_template_directory() . '/templates/shortcodes/work_projects_cards_es.php' );
 
 include( get_template_directory() . '/templates/shortcodes/post_projects.php' );
 
