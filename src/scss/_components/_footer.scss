@@ -1,5 +1,7 @@
 footer,
-narrow-footer {
+footer-es,
+narrow-footer,
+narrow-footer-es {
 
     padding-top: 0px;
     margin: 0;
@@ -76,6 +78,16 @@ narrow-footer {
             padding-bottom: 10px;
 
             .col {
+
+                &:lang(es){
+                    ul {
+                        li {
+                            a {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
 
                 &:nth-child(3) {
 
