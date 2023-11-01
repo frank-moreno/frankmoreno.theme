@@ -36,6 +36,8 @@ include( get_template_directory() . '/templates/shortcodes/work_projects_cards_e
 
 include( get_template_directory() . '/templates/shortcodes/post_projects.php' );
 
+include( get_template_directory() . '/templates/shortcodes/post_projects_es.php' );
+
 
 /* Describe what the code snippet does so you can remember later on */
 add_action('wp_head', 'coockie_policy_banner');
