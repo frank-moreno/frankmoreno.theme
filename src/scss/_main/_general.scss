@@ -63,14 +63,19 @@ img {
         top: -17px;
     }
 
-    @include media-breakpoint-down(xsm) {
-        top: 20px;
-        left: -20px;
+    @include media-breakpoint-down(sm) {
+        display: none;
     }
 
     li {
         display: inline-block;
         margin-right: 10px;
         float: left;
+
+        img {
+            width: 20px !important;
+            height: 14px !important;
+            // margin-left: 5px;
+        }
     }
 }

@@ -274,6 +274,13 @@
                             justify-content: end;
                             column-gap: 20px;
 
+                                @include media-breakpoint-down(sm) {
+                                    img {
+                                        width: 70px !important;
+                                        height: 70px !important;
+                                    }
+                                }
+
                             }
 
 
