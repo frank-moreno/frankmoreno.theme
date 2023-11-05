@@ -39,7 +39,7 @@ include( get_template_directory() . '/templates/shortcodes/post_projects.php' );
 include( get_template_directory() . '/templates/shortcodes/post_projects_es.php' );
 
 
-/* Describe what the code snippet does so you can remember later on */
+
 add_action('wp_head', 'coockie_policy_banner');
 function coockie_policy_banner(){
 ?>
@@ -48,7 +48,16 @@ function coockie_policy_banner(){
 };
 
 
-/* Describe what the code snippet does so you can remember later on */
+//function to add favicon to website
+function add_favicon() {
+    $favicon_url = get_template_directory_uri() . '/assets/images/favicon.ico';
+    echo '<link rel="shortcut icon" href="' . $favicon_url . '" />';
+}
+add_action( 'wp_head', 'add_favicon' );
+
+
+
+
 add_action('wp_footer', 'your_function_name_2');
 function your_function_name_2(){
 ?>
