@@ -38,23 +38,29 @@
                 color: $darkred;
                 font-size: 64px;
                 font-family: $handwriting-font;
-                position: absolute;
-                top: 25px;
-                left: -5px;
+                position: fixed;
+                margin-top: 25px;
+                margin-left: -200px;
                 transform: rotate(5deg);
                 &:lang(es){
                     left: 150px;
                     @include media-breakpoint-down(xl){
-                        left: 130px;
+                        // left: 130px;
+                        margin-left: 0;
+                    }
+                    @include media-breakpoint-down(sm){
+                        left: auto !important;
+                        margin-left: -80px;
                     }
                     @include media-breakpoint-down(xsm){
                         top: 0;
+                        left: auto;
                     }
                 }
                 @include media-breakpoint-down(sm){
                     font-size: 32px;
-                    top: 40px;
-                    left: 13%;
+                    margin-left: -100px;
+                    margin-top: 0;
                     &:lang(es){
                         left: 75px;
                         font-size: 45px;
@@ -63,14 +69,11 @@
                 @include media-breakpoint-down(xsm){
                     left: 0;
                     position: relative;
-                    float: left;
                     top: 0;
                 }
 
                 @media screen and (max-width: 320px) {
-                    float: left;
                     position: relative;
-                    top: 40px;
                     left: 0;
                     font-size: 24px;
                 }
