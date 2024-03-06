@@ -53,10 +53,10 @@ const swiper = new Swiper('.swiper-projects', {
             slidesPerView: 1.5
         }
     },
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 4000,
+    //     disableOnInteraction: false,
+    // },
     keyboard: {
         enabled: true,
         onlyInViewport: false,

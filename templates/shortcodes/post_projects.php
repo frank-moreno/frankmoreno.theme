@@ -55,12 +55,12 @@ function post_projects_shortcode() {
                     $gallery_images_count = count($gallery_images);
 
                     // give output to the user of the single post in a fixed layout
-                    $output = '<div class="project-item">
-                                    <div class="project-item__image">
-                                        <img src="' . $current_post_image . '" alt="' . $current_post_title . '">
-                                    </div>
+                    $output = '<div class="project-item"> 
                                     <div class="project-item__content">
                                         <h1 class="project-item__title">' . $current_post_title . '</h1>
+                                        <div class="project-item__image">
+                                            <img src="' . $current_post_image . '" alt="' . $current_post_title . '">
+                                        </div>
                                         <div class="project-item__description">
                                             <p>' . $project_description . '</p>
                                         </div>
