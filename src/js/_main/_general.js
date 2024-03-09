@@ -35,5 +35,19 @@ $(document).ready(function () {
         }
     });
 
+    $('nav.wp-block-navigation').append('<div id="menuToggle"><input type="checkbox" /> <span></span> <span></span> <span></span></div>');
+
+    if($(window).width() <= 1024) {
+
+        $('nav .wp-block-navigation__responsive-container').addClass('unactive');
+    
+        
+
+        $('#menuToggle input').on('click', function () {
+            $('nav .wp-block-navigation__responsive-container').toggleClass('unactive active');
+        });
+
+    }
+
 });
 
