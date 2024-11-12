@@ -38,6 +38,9 @@ include( get_template_directory() . '/templates/shortcodes/post_projects.php' );
 
 include( get_template_directory() . '/templates/shortcodes/post_projects_es.php' );
 
+include( get_template_directory() . '/templates/shortcodes/post_cards.php' );
+
+include( get_template_directory() . '/templates/shortcodes/post_cards_es.php' );
 
 
 add_action('wp_head', 'coockie_policy_banner');

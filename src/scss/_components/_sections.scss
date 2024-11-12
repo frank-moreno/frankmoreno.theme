@@ -1,125 +1,71 @@
 
 .section {
 
-    &__service{
-
-        &-red {
-
+    &__about{
+        &-banner {
+            height: 200px;
             margin: 0;
-            > .row {
-                padding: 100px 0 !important;
-            }
-
-            background-color: $darkred;
-
-            color: $white;
-
-            
-
-            @include media-breakpoint-up(xl){
-                //bars
-                .container .row > .col:first-child {
-                    border-right: #f7f7f7 1px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .container .col {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    height: 50px;
                 }
-
-                h2 {
-                    font-size: 64px;
+                figure {
+                    margin: 0;
                 }
             }
-
-            p {
-                font-size: 21px;
-
+            @include media-breakpoint-down(xl) {
+                height: 100px;
+            }
+        }
+        &-home {
+            padding-top: 0;
+            padding-bottom: 0;
+            margin: 0;
+            .areoi-background {
+                @include media-breakpoint-up(xl) {
+                    width: 50%;
+                }
                 @include media-breakpoint-down(xl) {
-                    text-align: left !important;
+                    opacity: .5;
                 }
             }
-
-            &.dev {
-                h2 {
-                    padding-right: 25%;
-                    padding-left: 5%;
-                    @include media-breakpoint-down(xl) {
-                        padding-left: 0;
-                    }
-                }
-    
-                p {
-                    padding-right: 5%;
-                }
+            .wp-block-group {
+                padding: 5% 0;;
             }
-
-            &.pwa {
-                h2 {
-                    padding-right: 5%;
-                    padding-left: 25%;
-                    @include media-breakpoint-down(xl) {
-                        padding-left: 0;
-                        padding-right: 20%;
-                        text-align: left;
-                        margin-bottom: -15px;
+            &--info {
+                @include media-breakpoint-up(xl) {
+                    .col:nth-child(2){
+                        padding: 0 0 0 10%;
                     }
                 }
-    
-                p {
-                    padding-left: 5%;
-                    @include media-breakpoint-down(xl) {
-                        padding-left: 0;
+
+                .wp-block-social-link {
+                    svg {
+                        width: 2em;
+                        height: 2em;
                     }
                 }
             }
-
         }
+    }
 
-        &-list {
-
-            margin: 100px 0;
-
-            @include media-breakpoint-up(xl){
-
-                &.left {
-                    background-image: url('../../assets/images/img/webuild.png');
-                    background-position: left;
-                    background-repeat: no-repeat;
-                    background-size: 50% 100%;
-                }
-    
-                &.right {
-                    background-image: url('../../assets/images/img/pwaimg.png');
-                    background-position: right;
-                    background-repeat: no-repeat;
-                    background-size: 50% 100%;
-                }
-
-            } 
-
-            .dev {
-                ol {
-                    padding: 0 0 0 50px;
-
-                    @include media-breakpoint-down(md) {
-                        padding: 0 0 0 20px;
-                    }
-
-                    li {
-                        font-size: 21px;
-                        font-weight: 300;
-                        line-height: 1.75;
-                        // margin-bottom: 1.5em;
-                        margin-top: 0;
-                        letter-spacing: .3px;
-                        font-family: $body-font;
-
-                        strong {
-                            font-weight: 500 !important;
-                            color: $darkred;
-                        }
-                    }
-                }
+    &__projects {
+        &--grid .row{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            @include media-breakpoint-down(lg) {
+                grid-template-columns: repeat(2, 1fr);
             }
-
+            @include media-breakpoint-down(sm) {
+                grid-template-columns: repeat(1, 1fr);
+            }
         }
-
     }
 
     &__quote {
@@ -180,91 +126,91 @@
 
     }
 
-    &__process-goes {
+    // &__process-goes {
 
-        background-color: $bluegrey;
-        color: $white;
+    //     background-color: $bluegrey;
+    //     color: $white;
 
-        padding-top: 100px;
-        margin: 0;
+    //     padding-top: 100px;
+    //     margin: 0;
 
-        &.goes2{
-            padding-bottom: 100px;
-        }
-
-
-        h2 {
-            color: $white;
-            font-size: 63px;
-            z-index: 1;
-            margin-bottom: 0;
-
-            & + p {
-                color: $white;
-                font-size: 24px;
-                z-index: 1;
-                margin-top: 0;
-            }
-        }
-
-        &--content {
-
-            padding: 40px;
-            background-color: #f7f7f7;
-            color: $bluegrey;
-
-            .wp-block-heading {
-                font-weight: 700;
-                line-height: 1.2;
-                margin-bottom: 0.5em;
-                margin-top: 0;
-                z-index: 1;
-            }
-
-        }
-
-        .howitgoes-swiper {
-
-            overflow: hidden;
-
-            .swiper-wrapper {
-                flex-wrap: nowrap;
-
-                .swiper-slide {
-                    margin: 0;
-                    min-height: 400px;
-
-                    @include media-breakpoint-down(sm) {
-                        margin-left: 3.4px;
-                    }
-                }
-            }
-
-            .swiper-button{
-
-                &-prev, 
-                &-next {
-                    color: $white;
-                    font-size: 40px;
-                    z-index: 1;
-                    position: relative;
-                    padding-bottom: 45px;
-                     margin: 20px 0;
-                }
-
-                &-prev {
-                    float: left;
-                }
-                &-next {
-                    float: right;
-                }
-
-            }
-
-        }
+    //     &.goes2{
+    //         padding-bottom: 100px;
+    //     }
 
 
-    }
+    //     h2 {
+    //         color: $white;
+    //         font-size: 63px;
+    //         z-index: 1;
+    //         margin-bottom: 0;
+
+    //         & + p {
+    //             color: $white;
+    //             font-size: 24px;
+    //             z-index: 1;
+    //             margin-top: 0;
+    //         }
+    //     }
+
+    //     &--content {
+
+    //         padding: 40px;
+    //         background-color: #f7f7f7;
+    //         color: $bluegrey;
+
+    //         .wp-block-heading {
+    //             font-weight: 700;
+    //             line-height: 1.2;
+    //             margin-bottom: 0.5em;
+    //             margin-top: 0;
+    //             z-index: 1;
+    //         }
+
+    //     }
+
+    //     .howitgoes-swiper {
+
+    //         overflow: hidden;
+
+    //         .swiper-wrapper {
+    //             flex-wrap: nowrap;
+
+    //             .swiper-slide {
+    //                 margin: 0;
+    //                 min-height: 400px;
+
+    //                 @include media-breakpoint-down(sm) {
+    //                     margin-left: 3.4px;
+    //                 }
+    //             }
+    //         }
+
+    //         .swiper-button{
+
+    //             &-prev, 
+    //             &-next {
+    //                 color: $white;
+    //                 font-size: 40px;
+    //                 z-index: 1;
+    //                 position: relative;
+    //                 padding-bottom: 45px;
+    //                  margin: 20px 0;
+    //             }
+
+    //             &-prev {
+    //                 float: left;
+    //             }
+    //             &-next {
+    //                 float: right;
+    //             }
+
+    //         }
+
+    //     }
+
+
+    // }
 
     &__latest-post {
 
@@ -307,127 +253,149 @@
     }
 
     &__work {
-
-        &--title {
-
-            .wp-block-heading{
-                font-size: 64px;
-                font-weight: $semibold;
-                margin-bottom: 0;
-                margin-top: 100px;
-            }
-
-            p {
-                font-family: $handwriting-2-font;
-                color: $gold;
-                font-size: 64px;
-                margin-bottom: 0;
-                @include media-breakpoint-down(md) {
-                   line-height: 45px;
-                }
-                @media screen and (max-width: 320px){
-                    font-size: 42px;
-                }
-            }
-
-        }
-
         &--grid {
-
-            margin: 50px 0 100px 0 !important;
-
-            .card-group {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-column-gap: 25px;
-                gap: 25px;
-                height: 100%;
-
-                @include media-breakpoint-down(lg) {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-
-                @include media-breakpoint-down(sm) {
-                    grid-template-columns: repeat(1, 1fr);
+            .col {
+                padding: 0;
+                .card-group {
+                    display: grid;
+                    grid-template-columns: repeat(4,1fr);
+                    gap: 0;
+                    @include media-breakpoint-down(lg) {
+                        grid-template-columns: repeat(2,1fr);
+                    }
+                    @include media-breakpoint-down(sm) {
+                        grid-template-columns: repeat(1,1fr);
+                    }
+                    .card {
+                        border-radius: 0;
+                    }
                 }
             }
+        }
+    }
+
+    // &__work {
+
+    //     &--title {
+
+    //         .wp-block-heading{
+    //             font-size: 64px;
+    //             font-weight: $semibold;
+    //             margin-bottom: 0;
+    //             margin-top: 100px;
+    //         }
+
+    //         p {
+    //             font-family: $handwriting-2-font;
+    //             color: $gold;
+    //             font-size: 64px;
+    //             margin-bottom: 0;
+    //             @include media-breakpoint-down(md) {
+    //                line-height: 45px;
+    //             }
+    //             @media screen and (max-width: 320px){
+    //                 font-size: 42px;
+    //             }
+    //         }
+
+    //     }
+
+    //     &--grid {
+
+    //         margin: 50px 0 100px 0 !important;
+
+    //         .card-group {
+    //             display: grid;
+    //             grid-template-columns: repeat(3, 1fr);
+    //             grid-column-gap: 25px;
+    //             gap: 25px;
+    //             height: 100%;
+
+    //             @include media-breakpoint-down(lg) {
+    //                 grid-template-columns: repeat(2, 1fr);
+    //             }
+
+    //             @include media-breakpoint-down(sm) {
+    //                 grid-template-columns: repeat(1, 1fr);
+    //             }
+    //         }
 
             
 
-            .card-body {
-                overflow: hidden;
-                padding: 0;
-                min-height: 350px;
+    //         .card-body {
+    //             overflow: hidden;
+    //             padding: 0;
+    //             min-height: 350px;
 
-                &:after{
-                    content: "";
-                    opacity: 0;
-                }
+    //             &:after{
+    //                 content: "";
+    //                 opacity: 0;
+    //             }
 
-                &:hover::after {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba($bluegrey,0.6);
-                    transition: all 0.3s ease-in-out;
-                    opacity: 1;
-                }
+    //             &:hover::after {
+    //                 content: "";
+    //                 position: absolute;
+    //                 top: 0;
+    //                 left: 0;
+    //                 width: 100%;
+    //                 height: 100%;
+    //                 background-color: rgba($bluegrey,0.6);
+    //                 transition: all 0.3s ease-in-out;
+    //                 opacity: 1;
+    //             }
 
-                .project-item {
+    //             .project-item {
 
-                    &__content{
+    //                 &__content{
 
-                        height: 100%;
-                        padding: 0 50px;
-                        color: $white;
+    //                     height: 100%;
+    //                     padding: 0 50px;
+    //                     color: $white;
 
-                    }
+    //                 }
 
-                    &__description{
+    //                 &__description{
 
-                        text-align: center;
+    //                     text-align: center;
 
-                    }
+    //                 }
 
-                }
+    //             }
 
-                &:hover {
+    //             &:hover {
 
-                    .project-item {
+    //                 .project-item {
 
-                        &__content {
-                            z-index: 2;
-                            position: relative;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: center;
-                            transition: all 0.3s ease-in-out;
-                        }
+    //                     &__content {
+    //                         z-index: 2;
+    //                         position: relative;
+    //                         display: flex;
+    //                         flex-direction: column;
+    //                         align-items: center;
+    //                         justify-content: center;
+    //                         transition: all 0.3s ease-in-out;
+    //                     }
 
-                    }
+    //                 }
                     
-                }
+    //             }
 
-                .project-item {
-                    &__image{
-                        img {
-                            position: absolute;
-                            height: 100%;
-                            width: 100%;
-                            object-fit: cover;
-                            object-position: center;
-                        }
-                    }
-                }
-            }
+    //             .project-item {
+    //                 &__image{
+    //                     img {
+    //                         position: absolute;
+    //                         height: 100%;
+    //                         width: 100%;
+    //                         object-fit: cover;
+    //                         object-position: center;
+    //                     }
+    //                 }
+    //             }
+    //         }
 
-        }
+    //     }
 
-    }
+    // }
 
     &__projects {
 

@@ -40,7 +40,7 @@
                 font-family: $handwriting-font;
                 position: inherit;
                 margin-top: 25px;
-                margin-left: -200px;
+                margin-left: 0px;
                 transform: rotate(5deg);
                 &:lang(es){
                     left: 0px;
@@ -175,8 +175,9 @@
                 justify-content: flex-end;
 
                 h1 {
-                    position: absolute;
-                    top: 25%;
+                    position: relative;
+                    margin-top: auto;
+                    margin-bottom: auto;
                 }
             }
         }
@@ -196,16 +197,18 @@
 
                     > .row {
 
-                        height: 80vh;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-evenly;
-                        padding: 10vh 0;
-
                        > .col {
+
+                            display: flex;
+                            flex-direction: column;
+                            height: 100vh;
+                            justify-content: center;
 
                             h1 {
                                 padding-top: 5vh;
+                                @include media-breakpoint-down(xl) {
+                                    margin-top: auto;
+                                }
                             }
 
                             .wp-block-spacer {
@@ -220,6 +223,9 @@
 
                                 @media screen and (max-width: 320px){
                                     font-size: 20px;
+                                }
+                                @include media-breakpoint-down(xl) {
+                                    margin-top: auto;
                                 }
                             }
         

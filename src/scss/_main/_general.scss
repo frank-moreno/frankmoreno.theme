@@ -55,8 +55,8 @@ img {
 .polylang_langswitcher {
     list-style: none;
     position: absolute !important;
-    top: 8px;
-    left: 160px;
+    top: 0px;
+    right: 0px;
     width: 100px;
 
     @include media-breakpoint-down(lg) {

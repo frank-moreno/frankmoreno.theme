@@ -48,7 +48,7 @@ function post_projects_shortcode() {
 
                     // get gallery images of project_images field
                     $gallery_images = get_field('project_images');
-
+                    $project_link = get_field('project_link');
                     $project_description = get_field('project_description');
 
                     // get the number of gallery images
@@ -61,6 +61,9 @@ function post_projects_shortcode() {
                                         <div class="project-item__image">
                                             <img src="' . $current_post_image . '" alt="' . $current_post_title . '">
                                         </div>
+                                        <div class="project-item__btn">
+                                            <a href="'. $project_link .'" target="_blank" class="wp-block-button__link">Go to the project</a>
+                                        </div>
                                         <div class="project-item__description">
                                             <p>' . $project_description . '</p>
                                         </div>
@@ -68,103 +71,28 @@ function post_projects_shortcode() {
                                 </div>';
 
                     // if there are gallery images, then show them in a slider
-                    if ( $gallery_images_count > 0 ) {
+                    // if ( $gallery_images_count > 0 ) {
 
-                        $output .= '<div class="swiper-container swiper-project-images">
-                                        <div class="swiper-wrapper">';
+                    //     $output .= '<div class="swiper-container swiper-project-images">
+                    //                     <div class="swiper-wrapper">';
 
-                        foreach ( $gallery_images as $gallery_image ) {
+                    //     foreach ( $gallery_images as $gallery_image ) {
 
-                            $output .= '<div class="swiper-slide">
-                                            <div class="project-item__image">
-                                                <a href="' . $current_post_permalink . '">
-                                                    <img src="' . $gallery_image['url'] . '" alt="' . $gallery_image['alt'] . '">
-                                                </a>
-                                            </div>
-                                        </div>';
-
-                        }
-
-                        $output .= '  </div>
-                                    </div>';
-
-                    }
-
-                    //if there are more than one posts, and there are only in english, then show only in english the next and previous posts
-                    if ( $query->post_count > 1 && $current_post_taxonomies[0]->slug == 'en') {
-
-                        $output .= '<div class="project-item__navigation">
-                                        <div class="project-item__navigation__previous">';
-
-                        if ( $current_post_index > 0 ) {
-
-                            $previous_post = get_previous_post();
-                            //check if the previous post is in english
-                            if (get_the_terms( $previous_post->ID, 'language' )[0]-> slug == 'en') {
-                                $output .= '<a href="' . get_the_permalink( $previous_post->ID ) . '">
-                                            <span class="project-item__navigation__previous__title">' . get_the_title( $previous_post->ID ) . '</span>
-                                            <span class="project-item__navigation__previous__label">Previous Project</span>
-                                        </a>';
-                            }
-
-                        }
-
-                        $output .= '</div>
-                                    <div class="project-item__navigation__next">';
-
-                        if ( $current_post_index < $query->post_count - 1 && $current_post_taxonomies[0]->slug == 'en') {
-
-                            $next_post = get_next_post();
-                            //check if the next post is in english
-                            if (get_the_terms( $next_post->ID, 'language' )[0]-> slug == 'en') {
-                                $output .= '<a href="' . get_the_permalink( $next_post->ID ) . '">
-                                            <span class="project-item__navigation__next__title">' . get_the_title( $next_post->ID ) . '</span>
-                                            <span class="project-item__navigation__next__label">Next Project</span>
-                                        </a>';
-                            }
-
-                        }
-
-                        $output .= '</div>
-                                    </div>';
-
-                    }
-
-                    // if there are more than one posts, then show the next and previous posts
-                    // if ( $query->post_count > 1 ) {
-
-                    //     $output .= '<div class="project-item__navigation">
-                    //                     <div class="project-item__navigation__previous">';
-
-                    //     if ( $current_post_index > 0 ) {
-
-                    //         $previous_post = get_previous_post();
-
-                    //         $output .= '<a href="' . get_the_permalink( $previous_post->ID ) . '">
-                    //                         <span class="project-item__navigation__previous__title">' . get_the_title( $previous_post->ID ) . '</span>
-                    //                         <span class="project-item__navigation__previous__label">Previous Project</span>
-                    //                     </a>';
+                    //         $output .= '<div class="swiper-slide">
+                    //                         <div class="project-item__image">
+                    //                             <a href="' . $current_post_permalink . '">
+                    //                                 <img src="' . $gallery_image['url'] . '" alt="' . $gallery_image['alt'] . '">
+                    //                             </a>
+                    //                         </div>
+                    //                     </div>';
 
                     //     }
 
-                    //     $output .= '</div>
-                    //                 <div class="project-item__navigation__next">';
-
-                    //     if ( $current_post_index < $query->post_count - 1 ) {
-
-                    //         $next_post = get_next_post();
-
-                    //         $output .= '<a href="' . get_the_permalink( $next_post->ID ) . '">
-                    //                         <span class="project-item__navigation__next__title">' . get_the_title( $next_post->ID ) . '</span>
-                    //                         <span class="project-item__navigation__next__label">Next Project</span>
-                    //                     </a>';
-
-                    //     }
-
-                    //     $output .= '</div>
+                    //     $output .= '  </div>
                     //                 </div>';
 
                     // }
+                    
 
                 }
 

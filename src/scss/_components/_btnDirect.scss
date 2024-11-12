@@ -1,0 +1,94 @@
+.shortBtn {
+    display: block;
+    position: absolute !important;
+    width: 55px;
+    @include media-breakpoint-up(xl) {
+        left: -27px;
+        top: 0;
+    }
+    @include media-breakpoint-down(xl) {
+        right: 27px;
+        bottom: 25px;
+    }
+}
+
+
+
+.download, .download span, .download i {
+    background: #8b312f;
+}
+
+.print, .print span, .print i {
+    background-color: #3e3f41;
+}
+
+.print i, .download i {
+    color: #ffffff;
+    display: block;
+    font-size: 17px;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    text-align: center;
+    z-index: 12;
+	margin-bottom:2px;
+}
+
+.print i:after,
+.download i:after {
+    content:'';
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    padding: 0;
+    margin: 15px 18px;
+}
+
+.print i:after {
+    content:'';
+    background-image:url('../../assets/images/img/svg/email-white.svg');
+}
+
+.download i:after {
+    content:'';
+    background-image:url('../../assets/images/img/svg/download-minimalistic.svg');
+}
+
+
+.print span, .download span {
+    color: #FFFFFF;
+    font-size: 15px;
+    height: 45px;
+    line-height: 45px;
+    opacity: 1;
+    overflow: hidden;
+    padding: 0 16px;
+    position: absolute;
+    right: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+	width: 0;
+    z-index: 12;
+}
+
+.print:hover span {
+    margin-right: 20px;
+    opacity: 1;
+    width: 170px;
+    box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+}
+.download:hover span {
+    margin-right: 20px;
+    opacity: 1;
+    width: 170px;
+    box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+}
