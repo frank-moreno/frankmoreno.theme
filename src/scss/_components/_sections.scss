@@ -268,134 +268,55 @@
                     }
                     .card {
                         border-radius: 0;
+                        .project-item {
+                            &__image {
+                                img {
+                                    height: 250px;
+                                    object-fit: cover;
+                                    object-position: center;
+                                }
+                            }
+                            &__title {
+                                padding: 30px 0;
+                            }
+                            &__span {
+                                position: absolute;
+                                bottom: 15px;
+                            }
+                        }
+                    }
+                }
+
+                .card-post {
+                    display: grid;
+                    grid-template-columns: repeat(3,1fr);
+                    gap: 40px;
+                    @include media-breakpoint-down(lg) {
+                        grid-template-columns: repeat(2,1fr);
+                    }
+                    @include media-breakpoint-down(sm) {
+                        grid-template-columns: repeat(1,1fr);
+                        gap: 0;
+                    }
+                    .card {
+                        border-radius: 0;
+                        border-color: transparent;
+                        background-color: transparent;
+                        .project-item {
+                            &__title {
+                                padding: 30px 0;
+                                color: $darkred;
+                            }
+                            &__span {
+                                position: absolute;
+                                bottom: 15px;
+                            }
+                        }
                     }
                 }
             }
         }
     }
-
-    // &__work {
-
-    //     &--title {
-
-    //         .wp-block-heading{
-    //             font-size: 64px;
-    //             font-weight: $semibold;
-    //             margin-bottom: 0;
-    //             margin-top: 100px;
-    //         }
-
-    //         p {
-    //             font-family: $handwriting-2-font;
-    //             color: $gold;
-    //             font-size: 64px;
-    //             margin-bottom: 0;
-    //             @include media-breakpoint-down(md) {
-    //                line-height: 45px;
-    //             }
-    //             @media screen and (max-width: 320px){
-    //                 font-size: 42px;
-    //             }
-    //         }
-
-    //     }
-
-    //     &--grid {
-
-    //         margin: 50px 0 100px 0 !important;
-
-    //         .card-group {
-    //             display: grid;
-    //             grid-template-columns: repeat(3, 1fr);
-    //             grid-column-gap: 25px;
-    //             gap: 25px;
-    //             height: 100%;
-
-    //             @include media-breakpoint-down(lg) {
-    //                 grid-template-columns: repeat(2, 1fr);
-    //             }
-
-    //             @include media-breakpoint-down(sm) {
-    //                 grid-template-columns: repeat(1, 1fr);
-    //             }
-    //         }
-
-            
-
-    //         .card-body {
-    //             overflow: hidden;
-    //             padding: 0;
-    //             min-height: 350px;
-
-    //             &:after{
-    //                 content: "";
-    //                 opacity: 0;
-    //             }
-
-    //             &:hover::after {
-    //                 content: "";
-    //                 position: absolute;
-    //                 top: 0;
-    //                 left: 0;
-    //                 width: 100%;
-    //                 height: 100%;
-    //                 background-color: rgba($bluegrey,0.6);
-    //                 transition: all 0.3s ease-in-out;
-    //                 opacity: 1;
-    //             }
-
-    //             .project-item {
-
-    //                 &__content{
-
-    //                     height: 100%;
-    //                     padding: 0 50px;
-    //                     color: $white;
-
-    //                 }
-
-    //                 &__description{
-
-    //                     text-align: center;
-
-    //                 }
-
-    //             }
-
-    //             &:hover {
-
-    //                 .project-item {
-
-    //                     &__content {
-    //                         z-index: 2;
-    //                         position: relative;
-    //                         display: flex;
-    //                         flex-direction: column;
-    //                         align-items: center;
-    //                         justify-content: center;
-    //                         transition: all 0.3s ease-in-out;
-    //                     }
-
-    //                 }
-                    
-    //             }
-
-    //             .project-item {
-    //                 &__image{
-    //                     img {
-    //                         position: absolute;
-    //                         height: 100%;
-    //                         width: 100%;
-    //                         object-fit: cover;
-    //                         object-position: center;
-    //                     }
-    //                 }
-    //             }
-    //         }
-
-    //     }
-
-    // }
 
     &__projects {
 

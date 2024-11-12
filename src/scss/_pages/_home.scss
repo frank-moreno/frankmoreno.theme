@@ -10,6 +10,12 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
 
+        // Only to iOS devices
+        @supports (-webkit-touch-callout: none) {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
         &::before {
             content: '';
             position: absolute;

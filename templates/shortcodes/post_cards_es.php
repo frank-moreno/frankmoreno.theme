@@ -24,7 +24,7 @@ function post_cards_es_shortcode() {
     // The Loop
     if ( $query->have_posts() ) {
 
-        $output = '<div class="card-group">';
+        $output = '<div class="card-post">';
 
         while ( $query->have_posts() ) {
             $query->the_post();
@@ -36,7 +36,7 @@ function post_cards_es_shortcode() {
                                 <div class="project-item__content">
                                     <h2 class="project-item__title">' . get_the_title() . '</h2>
                                     <div class="project-item__description">
-                                        <p>' . get_the_excerpt() . '</p> 
+                                        <p>' . mb_strimwidth(get_the_excerpt(), 0, 120, "...") . '</p>  
                                     </div>
                                     <div class="project-item__span">
                                         <span>Ver Post</span>
