@@ -36,8 +36,8 @@ nav .wp-block-navigation__responsive-container-close{
     @include media-breakpoint-down(md) {
         margin-top: 10px;
         position: absolute;
-        top: -10px;
-        right: -20px;
+        top: 25px;
+        right: 40px;
     }
 
     input {

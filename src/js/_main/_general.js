@@ -35,7 +35,7 @@ $(document).ready(function () {
         }
     });
 
-    $('nav.wp-block-navigation').append('<div id="menuToggle"><input type="checkbox" /> <span></span> <span></span> <span></span></div>');
+    $('header > div').append('<div id="menuToggle"><input type="checkbox" /> <span></span> <span></span> <span></span></div>');
 
     if($(window).width() <= 1024) {
 
